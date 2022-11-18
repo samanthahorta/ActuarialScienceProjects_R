@@ -1,10 +1,8 @@
-# Horta LÛpez Samantha YamilÈ
-# LAR711
 
-# a) C·lculo del numero Pi mediante el uso de numeros aleatorios #
+# a) C√°lculo del numero Pi mediante el uso de numeros aleatorios #
 
 
-# Repetimos el proceso de evaluaciÛn 100 veces 
+# Repetimos el proceso de evaluaci√≥n 100 veces 
 Resultado <- c()
 c <- 0:100
 for (i in c){
@@ -23,8 +21,8 @@ for (i in c){
   sim$dist <- sqrt(x**2+y**2)
   
   #Se condiciona un factor que:
-  #dist >= 1 ser·n igual a 1
-  #dist < 1 ser·n igual a 0 
+  #dist >= 1 ser√°n igual a 1
+  #dist < 1 ser√°n igual a 0 
   sim$s <- as.factor((sim$dist>=1)*1)
   
   #Usamos la formula de (4*Area del circulo)/ Area del cuadrado
@@ -43,7 +41,7 @@ resultados
 
 
 
-#### GR¡FICO ####
+#### GR√ÅFICO ####
 
 plot(sim$x,sim$y,pch=c(1,2)[sim$s],col=c(1,6)[sim$s])
 
@@ -60,7 +58,7 @@ plot(sim$x,sim$y,pch=c(1,2)[sim$s],col=c(1,6)[sim$s])
 a<-0
 b<-pi
 
-# Hacer una funciÛn G con la funciÛn a evaluar, en este caso sin(x)
+# Hacer una funci√≥n G con la funci√≥n a evaluar, en este caso sin(x)
 G <- function(x){
   return(sin(x)) 
 }
@@ -71,10 +69,10 @@ monte_carlo <- function(G,a,b,M){                  # Establecemos parametros: G,
   for(i in 1:M){
     s = s + G(a+(b-a)*runif(1,0,1))                #Para generar numeros aleatorios de manera uniforme dentro de la funcion  a evaluar G(x)                    
   }
-  return(((b-a)/M)*s)                              #EvaluaciÛn de la interal M veces 
+  return(((b-a)/M)*s)                              #Evaluaci√≥n de la interal M veces 
 }                                                 
 
-# Repetimos el proceso de evaluaciÛn 100 veces 
+# Repetimos el proceso de evaluaci√≥n 100 veces 
 R <- c()
 c <- 0:100
 for (i in c){
@@ -83,7 +81,7 @@ for (i in c){
   
   
 
-# GR¡FICO 
+# GR√ÅFICO 
 
 curve(G,a,b,lwd=2,axes=FALSE,xlab='',ylab='')                              
 axis(1)                                                                    
